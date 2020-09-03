@@ -1,15 +1,15 @@
-#Resume
-##Contact info
-Nikita Mordvinov
+# Resume
+## Contact info
+### Nikita Mordvinov
 @thirdmadman as in discord, telegram an github
-##About me
-Self concentred engeener.
+## About me
+Self concentrated, engineer.
 Accuracy, confidentiality my favorite rules.
 Team is important part of my life, like a family.
-##Skills
+## Skills
 Git, HTML, CSS, JS, vue.js, PHP, Laravel, Java, Spring Boot, C++, Fusion 360, Photoshop, Ilustaor
 Docker, Linux, bash
-##Code examples
+## Code examples
 ```
     public ArrayList<String> getTasksDedicId() {
         ArrayList<String> tasks = new ArrayList<>();
@@ -51,9 +51,10 @@ Docker, Linux, bash
         return null;
     }
 ```
-##Experience
+## Experience
 NC (mano) java school project (teamlead, fullstack) https://github.com/nceduc-mano-tlt-org/2019-school-journal
-##Education
+## Education
 TGU Electronics and nanoelectronics, mastery
 NC java developer courses
-##Languages(native language), English (Intermediate)
+## Languages
+Russian(native language), English (Intermediate)
