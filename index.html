@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Resume</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Resume</h1>
+    <h2>Contact info</h2>
+    <h3>Nikita Mordvinov</h3>
+    <div>@thirdmadman as in discord, telegram an github</div>
+    <h2>About me</h2>
+    <img src="https://avatars1.githubusercontent.com/u/21088474?s=60&v=4">
+    <div>Self concentrated, engineer.
+        Accuracy, confidentiality my favorite rules.
+        Team is important part of my life, like a family.
+    </div>
+    <h2>Skills</h2>
+    <div>Git, HTML, CSS, JS, vue.js, PHP, Laravel, Java, Spring Boot, C++, Fusion 360, Photoshop, Ilustaor
+        Docker, Linux, bash
+    </div>
+
+    <h2>Code examples</h2>
+    <pre>
+        <code>
+public ArrayList<String> getTasksDedicId() {
+    ArrayList<String> tasks = new ArrayList<>();
+        HttpController http = new HttpController();
+        Map<String, String> requestParams = new HashMap<>();
+        try {
+        requestParams = new HashMap<>();
+        requestParams.put("out", "JSONdata");
+        requestParams.put("auth", this.authToken);
+        requestParams.put("func", "task");
+        JSONArray tasksArray = null;
+        String authContent = http.getHttpsReqWithData(GlobalSettings.getProperty("config.billmgrUrl"), requestParams);
+
+        if (authContent.length() > 0) {
+        String jsonNoChecked = authContent.replace(": null", "\"\"");
+        tasksArray = new JSONArray(jsonNoChecked);
+        if (tasksArray != null) {
+        for (int i = 0; i < tasksArray.length(); i++) {
+        JSONObject task = null;
+        try {
+        task = tasksArray.getJSONObject(i);
+        if (task.getString("itemtype_intname").equals("dedic")) {
+        tasks.add(task.getString("id"));
+        }
+        } catch (Exception e) {
+        log.log(Level.WARNING, "BILLMGR: getTasksDedicId: ERROR fetching JSON: some fields may be empty, id: [" + task.getString("id") + "]");
+        }
+        }
+        return tasks;
+        }
+        } else {
+        log.log(Level.SEVERE, "BILLMGR: getTasksDedicId: Bad response of JSON - empty");
+        System.out.println("No correct JSON found");
+        }
+        } catch (Exception e) {
+        log.log(Level.SEVERE, "BILLMGR: getTasksDedicId: Failed to load JSON");
+        e.printStackTrace();
+        }
+        return null;
+        }
+
+        </code>
+    </pre>
+    <h2>Experience</h2>
+    <div>NC (mano) java school project (teamlead, fullstack) https://github.com/nceduc-mano-tlt-org/2019-school-journal</div>
+    <h2>Education</h2>
+    <div>TGU Electronics and nanoelectronics, mastery
+        NC java developer courses
+    </div>
+    <h2>Education</h2>
+    <div>
+        Russian(native language), English (Intermediate)
+    </div>
+
+
+</div>
+</body>
+</html>

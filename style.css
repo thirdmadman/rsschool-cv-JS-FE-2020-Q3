@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+}
+
+.container {
+    max-width: 1024px;
+    text-align: left;
+    display: inline-block;
+}
